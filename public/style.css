@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: #E7E9EA;
+}
+.main-container{
+    margin-left: 25%;
+}
+.post {
+    width: 38vw;
+    border: 1.5px solid white;
+}
+.new-body{
+    background-color: rgb(0, 0, 0);
+}
+.formMain {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+}
+
+#username{
+    margin-bottom: 10%;
+    height: 2rem;
+    width: 16rem;
+    border: 3px #381d2a solid;
+    border-radius: 10%;
+    background-color: gray;
+}
+
+#content {
+    border: 3px #381d2a solid;
+    margin-bottom: 10%;
+    margin-left: 4%;
+    border-radius: 10%;
+    background-color: gray;
+    font-weight: 600;
+}
+
+#button {
+    height: 1.8rem;
+    width: 5rem;
+    margin-left: 35%;
+    margin-bottom: 10%;
+    background-color: gray;
+    border-radius: 15%;
+}
+::placeholder{
+    color: black;
+}
+
+#new-tweet {
+    height: 1.8rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 15%;
+}
+
+#tweet {
+    text-decoration: none;
+    color: black;
+}
+
+#details {
+    text-decoration: none;
+    color: white;
+}
+
+#details:hover {
+    transition: ease-in;
+    color: wheat;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweets</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Tweets</h1>
+            <% for(post of posts) { %>
+                <div class="post">
+                    <h3 class="user">@<%= post.username %>
+                    </h3>
+                    <p class="content">
+                        <%= post.content %>
+                    </p>
+                    <br>
+                    <a id="details" href="http://localhost:3000/tweets/<%= post.id %>">See your tweet</a>
+                </div>
+                <br>
+                <br>
+                <% } %>
+        </div>
+        <div id="new-tweet">
+            <a id="tweet" href="http://localhost:3000/tweets/new">New Tweet</a>
+        </div>
+    </div>
+</body>
+
+</html>
