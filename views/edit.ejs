@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="new-body">
+    <div class="heading">
+        <h1>Edit your Tweet Here!</h1>
+    </div>
+    <div class="formMain">
+        <div class="form-container">
+            <form action="/tweets" method="post">
+                <p>Post id : <%= post.id %>
+                </p>
+                <p>Username : <%= post.username %>
+                </p>
+                <textarea id="content" name="content" cols="30" rows="10"><%= post.content %></textarea>
+                <br>
+                <button id="button">submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

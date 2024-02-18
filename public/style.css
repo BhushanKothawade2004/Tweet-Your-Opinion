@@ -69,12 +69,12 @@ body {
     color: black;
 }
 
-#details {
+.details {
     text-decoration: none;
     color: white;
 }
 
-#details:hover {
+.details:hover {
     transition: ease-in;
     color: wheat;
 }

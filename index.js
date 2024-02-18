@@ -47,16 +47,30 @@ app.post("/tweets", (req, res) => {
     let id = uuidv4();
     posts.push({username, content, id});
     res.redirect("/tweets"); 
-});
+}); 
 
 app.get("/tweets/:id", (req, res) => {
     let { id } = req.params;
     let post = posts.find((p) => id === p.id);
     res.render("show.ejs", { post });
-})
+});
 
-app.patch()
+app.patch("/tweets/:id", (req, res) => {
+    let { id } = req.params;
+    let newContent = req.body.Content; 
+    let post = posts.find((p) => id === p.id);
+    post.content = newContent;
+    console.log(post);
+    res.send("Patch request working"); 
+}) ;
+
+app.get("/tweets/:id/edit", (req, res) => {
+    let { id } = req.params;
+    let post = posts.find((p) => id === p.id);
+    res.render("edit.ejs", { post });
+});
+
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
-}) ; 
+}); 
