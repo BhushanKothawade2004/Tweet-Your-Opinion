@@ -30,7 +30,7 @@ let posts = [
         content: "Snakes in your backyard won't bite only neighbours",
     },
 
-]
+];
 
 app.get("/", (req, res) => {
     res.send("This is our Home Page");
@@ -72,6 +72,13 @@ app.get("/tweets/:id/edit", (req, res) => {
     res.render("edit.ejs", { post });
 });
 
+//Destroy Route
+app.delete("/tweets/:id", (req, res) => {
+    let { id } = req.params;
+    posts = posts.filter((p) => id !== p.id);
+    res.redirect("/tweets");
+});
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
-}); 
+});

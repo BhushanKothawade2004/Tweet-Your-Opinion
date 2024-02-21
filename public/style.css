@@ -78,3 +78,12 @@ body {
     transition: ease-in;
     color: wheat;
 }
+
+.delete {
+    display: inline-block;
+}
+
+#del-btn {
+    background-color: rgb(201, 197, 197);
+    border-radius: 15%;
+}
