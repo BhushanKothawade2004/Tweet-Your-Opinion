@@ -14,7 +14,7 @@
     </div>
     <div class="formMain">
         <div class="form-container">
-            <form action="/tweets" method="post">
+            <form action="/tweets/<%= post.id %>?_method=PATCH" method="post">
                 <p>Post id : <%= post.id %>
                 </p>
                 <p>Username : <%= post.username %>
